@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  blog:
+    image: blog-website
+    working_dir: /usr/src/app
+    volumes:
+      - blog-storage:/usr/src/app/storage/thumbnails
+    ports:
+      - "8002:8001"  # Change this to the port your app uses
+
+volumes:
+  blog-storage:
